@@ -1,0 +1,668 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #f9a825;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background-color: rgb(74 74 74 / 85%);
+    backdrop-filter: blur(2px);
+    box-shadow: inset -4px -3px 17px 8px rgb(61 61 61 / 50%);
+    border-radius: 10px;
+    margin: 1rem auto;
+    max-width: 1486px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #f9a825;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #ffc107;
+}
+
+
+/* Navbar Links */
+.navbar a {
+    color: #e0e0e0;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #333;
+    color: #f9a825;
+}
+
+
+/* Intro Section */
+.intro {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 8rem 1rem;
+    color: #f0f0f0;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 1rem auto;
+    max-width: 1200px;
+}
+.intro-overlay {
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+}
+.intro-title {
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.intro-title span {
+    color: #f9a825;
+    font-style: italic;
+}
+.intro-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+.intro-description {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+.intro-button {
+    padding: 0.8rem 1.8rem;
+    background-color: #f9a825;
+    color: #121212;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.2s;
+}
+.intro-button:hover {
+    background-color: #ffc107;
+    transform: scale(1.05);
+}
+
+/* Hero, Programs, and Other Sections */
+.section {
+    margin: 2rem auto;
+    max-width: 1200px;
+    border-radius: 15px;
+    padding: 3rem;
+    color: #e0e0e0;
+    background: rgba(20, 20, 20, 0.9);
+    backdrop-filter: blur(5px);
+}
+.hero, .programs, .collage, .contact {
+    margin: 1rem;
+}
+.section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Hero Section */
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 5rem 1rem;
+    background-color: rgba(30, 30, 30, 0.9);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    text-align: left;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+    max-width: 1200px;
+}
+
+.hero-content {
+    flex: 1 1 60%; /* Allows content to take up 60% of width */
+    max-width: 600px;
+    padding: 1rem;
+    animation: fadeIn 2s ease-in;
+}
+
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #f0f0f0;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #d3d3d3;
+    margin-bottom: 1.5rem;
+}
+
+.hero-image {
+    flex: 1 1 40%; /* Allows image to take up 40% of width */
+    max-width: 400px;
+    animation: fadeInRight 2s ease-in;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-left: 1rem;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    color: #333;
+    background-color: #f9a825;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.2s;
+    text-align: center;
+}
+.button:hover {
+    background-color: #ffc107;
+    transform: scale(1.05);
+}
+
+/* Programs Section */
+.programs {
+    background-image: url('programs-background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 3rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 15px;
+}
+.programs-container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Collage Section */
+
+/* Contact Section */
+/* Contact Section */
+.contact {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: rgba(20, 20, 20, 0.9);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.contact h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    color: #f9a825;
+    margin-bottom: 1.5rem;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    color: #d3d3d3;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+    padding: 1rem;
+    border: 1px solid #555;
+    border-radius: 10px;
+    background-color: #333;
+    color: #e0e0e0;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact input:focus, .contact textarea:focus {
+    outline: none;
+    border-color: #f9a825;
+}
+
+.contact textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact button {
+    padding: 1rem;
+    background-color: #f9a825;
+    color: #121212;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact button:hover {
+    background-color: #ffc107;
+    transform: scale(1.05);
+}
+
+
+/* Footer */
+.footer {
+    padding: 2rem;
+    text-align: center;
+    background-color: rgba(20, 20, 20, 0.9);
+    border-radius: 15px;
+    margin: 1rem auto;
+    max-width: 1200px;
+}
+.socials a {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    color: #f9a825;
+    transition: color 0.3s;
+}
+.socials a:hover {
+    color: #ffc107;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Scroll Animation Styles */
+.scroll-animate {
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate.fade-in-up {
+    animation: fadeInUp 0.8s forwards;
+}
+
+.animate.fade-in {
+    animation: fadeIn 0.8s forwards;
+}
+
+.animate.zoom-in {
+    animation: zoomIn 0.8s forwards;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 1.5rem;
+    }
+    .navbar a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+    .intro-title {
+        font-size: 1.7rem;
+    }
+    .intro-description {
+        font-size: 1rem;
+    }
+    .intro-button {
+        font-size: 1rem;
+    }
+    .hero-content, .hero-image {
+        max-width: 100%;
+    }
+    .collage-content, .collage-images {
+        flex: 1 1 100%;
+    }
+}
+/* Promotion Section */
+/* Promotion Section */
+.promotion-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: rgba(20, 20, 20, 0.9);
+    color: #e0e0e0;
+    border-radius: 15px;
+    margin: 2rem auto;
+    max-width: 1000px;
+    backdrop-filter: blur(5px);
+}
+
+.promotion-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    color: #f9a825;
+    margin-bottom: 1.5rem;
+}
+
+.promotion-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.join-button {
+    padding: 0.8rem 1.8rem; /* Spacing for a comfortable clickable area */
+    background-color: #f9a825; /* Primary yellow color */
+    color: #121212; /* Dark text for good contrast */
+    border: none; /* Remove any default browser border */
+    border-radius: 25px; /* Rounded corners for modern look */
+    font-size: 1.1rem; /* Font size for better readability */
+    font-weight: 500; /* Medium weight for emphasis */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s, transform 0.2s; /* Smooth transition for hover effects */
+    margin-top: 20px; /* Add space above the button */
+}
+
+.join-button:hover {
+    background-color: #ffc107; /* Lighter yellow for hover */
+    transform: scale(1.05); /* Slight zoom on hover for interactivity */
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px; /* Add spacing below the cards */
+}
+
+
+/* Collage Images */
+.collage-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.collage-images img {
+    width: 100%;
+    max-width: calc(40% - 0.5rem);
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover;
+}
+.collage-images img:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+/* Modal for Join Form */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    background-color: #333;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    text-align: left;
+}
+
+.modal-content h3 {
+    color: #f9a825;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.modal-content input, .modal-content select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #444;
+    color: #e0e0e0;
+}
+.modal.show-modal {
+    opacity: 1;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+.product-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: space-between; /* Space between the cards */
+    gap: 20px; /* Adjust gap if necessary */
+}
+
+.product-card {
+    flex: 1; /* Distribute space equally among the cards */
+    max-width: 300px; /* Fixed width */
+    height: auto; /* Adjust height dynamically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth zoom transition */
+    padding: 15px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px; /* Ensures uniform image height */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px; /* Space below image */
+}
+
+.product-card h3 {
+    font-size: 1.1rem;
+    margin: 10px -13px;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0px 0;
+}
+
+.product-card a.button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.product-card a.button:hover {
+    background-color: #0056b3;
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Slight zoom */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow */
+}
+
+
+
+
+/*form*/
+.custom-form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.custom-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+/* Form Fields */
+.custom-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.custom-form input,
+.custom-form select,
+.custom-form button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #2b2b2b;
+    color: #ffffff;
+}
+
+.custom-form input::placeholder,
+.custom-form select::placeholder {
+    color: #888888;
+}
+
+.custom-form input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.custom-form .checkbox-group label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+}
+
+/* Submit Button */
+.custom-form button {
+    background-color: #ffcc00;
+    color: #333333;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-form button:hover {
+    background-color: #e6b800;
+    transform: scale(1.02);
+}
+
+/* File Upload Styling */
+.custom-form input[type="file"] {
+    border: 1px solid #444444;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .custom-form {
+        padding: 15px;
+    }
+
+    .custom-form button {
+        font-size: 16px;
+    }
+}

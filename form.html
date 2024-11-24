@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Form Container */
+        .custom-form {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .custom-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+
+        /* Form Fields */
+        .custom-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        .custom-form input,
+        .custom-form select,
+        .custom-form button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #2b2b2b;
+            color: #ffffff;
+        }
+
+        .custom-form input::placeholder,
+        .custom-form select::placeholder {
+            color: #888888;
+        }
+
+        .custom-form input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .custom-form .checkbox-group label {
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+        }
+
+        /* Submit Button */
+        .custom-form button {
+            background-color: #ffcc00;
+            color: #333333;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .custom-form button:hover {
+            background-color: #e6b800;
+            transform: scale(1.02);
+        }
+
+        /* File Upload Styling */
+        .custom-form input[type="file"] {
+            border: 1px solid #444444;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .custom-form {
+                padding: 15px;
+            }
+
+            .custom-form button {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form class="custom-form" method="post"
+        action="https://script.google.com/macros/s/AKfycbyQMjeuiiGhgty8n9TeeMNt8dGwliA_OYd0fbQNbIDSAezZRz0p0lIBAYrI1qjE-kvL/exec"
+        name="contact-form">
+        <h2>Join Our Community</h2>
+
+        <label for="name">Your Name *</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+        <label for="phone">Phone Number *</label>
+        <input type="tel" id="phone" name="phone" placeholder="+91" required />
+
+        <label for="email">Your Email *</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+        <label for="profile">Select Your Profile *</label>
+        <select id="profile" name="profile" required>
+            <option value="">Choose your profile</option>
+            <option value="teacher">School Teacher</option>
+            <option value="student">Student</option>
+            <option value="admin">College Tutor</option>
+            <option value="admin">Job Seeker</option>
+        </select>
+
+        <label for="employment">Current Employment</label>
+        <input type="text" id="employment" name="employment"
+            placeholder="Mention School or College Name or looking out" />
+
+        <label for="subject">Subject *</label>
+        <input type="text" id="subject" name="subject" placeholder="Enter subject" required />
+
+        <label>Locality</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="locality" value="cvraman" /> CV Raman Nagar</label>
+            <label><input type="checkbox" name="locality" value="kaggadaspura" /> Kaggadaspura</label>
+            <label><input type="checkbox" name="locality" value="gmpalya" /> GM Palya</label>
+            <label><input type="checkbox" name="locality" value="malleshpalya" /> Malleshpalya</label>
+            <label><input type="checkbox" name="locality" value="bnarayanpura" /> B Narayanpura</label>
+            <label><input type="checkbox" name="locality" value="krpuram" /> KR Puram</label>
+            <label><input type="checkbox" name="locality" value="pai" /> Pai Layout</label>
+            <label><input type="checkbox" name="locality" value="tin" /> Tin Factory</label>
+            <label><input type="checkbox" name="locality" value="other" /> Other Locations Around</label>
+        </div>
+
+        <label for="resume">Upload Resume:</label>
+        <input type="file" name="file" required />
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyQMjeuiiGhgty8n9TeeMNt8dGwliA_OYd0fbQNbIDSAezZRz0p0lIBAYrI1qjE-kvL/exec';
+
+        const form = document.forms['contact-form'];
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form),
+            })
+                .then(() => {
+                    alert('Thank you! Your form is submitted successfully.');
+                    window.location.reload();
+                })
+                .catch((error) => console.error('Error!', error.message));
+        });
+    </script>
+</body>
+
+</html>
