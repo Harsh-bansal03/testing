@@ -27,3 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function redirectToForm() {
     window.location.href = "form.html";
 }
+function toggleMenu() {
+    const links = document.querySelector('.navbar-links');
+    links.classList.toggle('active');
+}

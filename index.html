@@ -3,33 +3,42 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>The Academician</title>
+        <title>The Qubic India Academy</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" as="style">
     </head>
     
 <body>
     <!-- Navbar -->
-    <nav class="navbar scroll-animate fade-in">
-        <div class="navbar-left">
-            <span class="logo">The Academician</span>
-            <a href="#home">Home</a>
-            <a href="#contact">Contact Us</a>
+    <nav class="navbar scroll-animate fade-in" style="margin-top: 1%;">
+        <!-- Logo Section -->
+        <span class="logo">Qubic India</span>
+    
+        <!-- Hamburger Menu -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <div class="navbar-right">
-            <a href="#sign-in">Sign In</a>
+    
+        <!-- Navbar Links -->
+        <div class="navbar-links">
+            <a href="#home">Home</a>
+            <a href="#promotion">Join Us</a>
             <a href="#contact">Contact Us</a>
         </div>
     </nav>
     
+    
     <!-- Intro Section -->
     <section class="intro scroll-animate fade-in-up">
-        <div class="intro-overlay">
-            <h1 class="intro-title">The Academician-Academicians: <span>"Where Passion Meets Prosperity"</span></h1>
-            <p class="intro-subtitle">www.theacademician.org</p>
-            <p class="intro-description">The Academician offers a unique opportunity to cultivate and monetize your passion.</p>
+        <div class="intro-overlay" id="home">
+            <h1 class="intro-title">The Qubic India Academy-Qubic India Academys: <span>"Where Passion Meets Prosperity"</span></h1>
+            <p class="intro-subtitle">www.theQubic India Academy.org</p>
+            <p class="intro-description">The Qubic India Academy offers a unique opportunity to cultivate and monetize your passion.</p>
             <a href="#contact" class="intro-button">Contact Us</a>
         </div>
     </section>
@@ -55,14 +64,14 @@
         <div class="product-container">
             <div class="product-card">
               <img src="collage1.jpeg" alt="Laptop Image">
-              <h3>School Academicians</h3>
+              <h3>School Qubic</h3>
               <p>Home tutors</p>
               <p>Online</p>
               <a href="#" class="button">Register</a>
             </div>
             <div class="product-card">
               <img src="collage2.jpeg" alt="Laptop Image">
-              <h3>University Academicians</h3>
+              <h3>University Qubic</h3>
               <p>Home Tutors</p>
               <p>Online</p>
               <a href="#" class="button">Register</a>
@@ -93,7 +102,7 @@
     <!-- Contact Form Section -->
     <section class="contact scroll-animate fade-in-up" id="contact">
         <h2>Let's Connect</h2>
-        <form action="#" method="POST">
+        <form action="https://formsubmit.co/academyqubic@gmail.com" method="POST">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" placeholder="Your Message" required></textarea>
@@ -103,13 +112,13 @@
 
     <!-- Footer -->
     <footer class="footer scroll-animate fade-in">
-        <p>Contact us at: info@yourcompany.com | +1 555-555-5556</p>
+        <p>Contact us at: academyqubic@gmail.com | +91 8095178797 </p>
         <div class="socials">
             <a href="#">Instagram</a>
             <a href="#">X</a>
             <a href="#">Facebook</a>
         </div>
-        <p>&copy; 2023 The Academician</p>
+        <p>&copy; 2024 The Qubic India Academy</p>
     </footer>
 
     <script src="scripts.js"></script>

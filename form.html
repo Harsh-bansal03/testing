@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Design</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -156,23 +158,43 @@
 
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbyQMjeuiiGhgty8n9TeeMNt8dGwliA_OYd0fbQNbIDSAezZRz0p0lIBAYrI1qjE-kvL/exec';
-
+    
         const form = document.forms['contact-form'];
-
+    
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-
+    
             fetch(scriptURL, {
                 method: 'POST',
                 body: new FormData(form),
             })
                 .then(() => {
-                    alert('Thank you! Your form is submitted successfully.');
-                    window.location.reload();
+                    Swal.fire({
+                        title: 'Submission Successful!',
+                        text: 'Thank you for joining our community. Redirecting you to the promotion section...',
+                        icon: 'success',
+                        confirmButtonText: 'Continue',
+                        allowOutsideClick: false,
+                        allowEscapeKey: false,
+                        timer: 3000, // Automatically close after 3 seconds
+                        timerProgressBar: true,
+                    }).then(() => {
+                        window.location.href = 'index.html#promotion'; // Redirect after acknowledgment
+                    });
                 })
-                .catch((error) => console.error('Error!', error.message));
+                .catch((error) => {
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'There was a problem submitting the form. Please try again later.',
+                        icon: 'error',
+                        confirmButtonText: 'Okay',
+                    });
+                    console.error('Error!', error.message);
+                });
         });
     </script>
+    
+    
 </body>
 
 </html>
