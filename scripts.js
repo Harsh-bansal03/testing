@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach((entry) => {
             entry.target.classList.toggle("animate", entry.isIntersecting);
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0 });
 
     animatedElements.forEach((element) => observer.observe(element));
 });
