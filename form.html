@@ -83,7 +83,12 @@
             transition: all 0.3s ease-in-out;
         }
 
-        .custom-form button:hover {
+        .custom-form button:disabled {
+            background-color: #bbbbbb;
+            cursor: not-allowed;
+        }
+
+        .custom-form button:hover:enabled {
             background-color: #e6b800;
             transform: scale(1.02);
         }
@@ -109,7 +114,7 @@
 <body>
     <form class="custom-form" method="post"
         action="https://script.google.com/macros/s/AKfycbyQMjeuiiGhgty8n9TeeMNt8dGwliA_OYd0fbQNbIDSAezZRz0p0lIBAYrI1qjE-kvL/exec"
-        name="contact-form">
+        name="contact-form" enctype="multipart/form-data">
         <h2>Join Our Community</h2>
 
         <label for="name">Your Name *</label>
@@ -127,7 +132,7 @@
             <option value="teacher">School Teacher</option>
             <option value="student">Student</option>
             <option value="admin">College Tutor</option>
-            <option value="admin">Job Seeker</option>
+            <option value="job_seeker">Job Seeker</option>
         </select>
 
         <label for="employment">Current Employment</label>
@@ -151,50 +156,61 @@
         </div>
 
         <label for="resume">Upload Resume:</label>
-        <input type="file" name="file" required />
+        <input type="file" id="resume" name="resume" accept=".pdf" required />
 
-        <button type="submit">Submit</button>
+        <button type="submit" id="submit-btn">Submit</button>
     </form>
 
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyQMjeuiiGhgty8n9TeeMNt8dGwliA_OYd0fbQNbIDSAezZRz0p0lIBAYrI1qjE-kvL/exec';
-    
         const form = document.forms['contact-form'];
-    
-        form.addEventListener('submit', (e) => {
+        const submitBtn = document.getElementById('submit-btn');
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyQMjeuiiGhgty8n9TeeMNt8dGwliA_OYd0fbQNbIDSAezZRz0p0lIBAYrI1qjE-kvL/exec';
+
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
-    
-            fetch(scriptURL, {
-                method: 'POST',
-                body: new FormData(form),
-            })
-                .then(() => {
-                    Swal.fire({
-                        title: 'Submission Successful!',
-                        text: 'Thank you for joining our community. Redirecting you to the promotion section...',
-                        icon: 'success',
-                        confirmButtonText: 'Continue',
-                        allowOutsideClick: false,
-                        allowEscapeKey: false,
-                        timer: 3000, // Automatically close after 3 seconds
-                        timerProgressBar: true,
-                    }).then(() => {
-                        window.location.href = 'index.html#promotion'; // Redirect after acknowledgment
-                    });
-                })
-                .catch((error) => {
-                    Swal.fire({
-                        title: 'Error!',
-                        text: 'There was a problem submitting the form. Please try again later.',
-                        icon: 'error',
-                        confirmButtonText: 'Okay',
-                    });
-                    console.error('Error!', error.message);
+
+            // Validate Resume File Size
+            const resumeInput = document.getElementById('resume');
+            const resumeFile = resumeInput.files[0];
+            if (resumeFile.size > 2 * 1024 * 1024) { // 2 MB limit
+                Swal.fire({
+                    title: 'File too large!',
+                    text: 'Please upload a resume smaller than 2 MB.',
+                    icon: 'error',
+                    confirmButtonText: 'Okay',
                 });
+                return;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+
+            try {
+                await fetch(scriptURL, { method: 'POST', body: new FormData(form) });
+                Swal.fire({
+                    title: 'Submission Successful!',
+                    text: 'Thank you for joining our community.',
+                    icon: 'success',
+                    confirmButtonText: 'Continue',
+                }).then(() => {
+                    if (confirm('Would you like to be redirected to the promotion section?')) {
+                        window.location.href = 'index.html#promotion';
+                    }
+                });
+            } catch (error) {
+                console.error('Error!', error.message);
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'There was a problem submitting the form. Please try again later.',
+                    icon: 'error',
+                    confirmButtonText: 'Okay',
+                });
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit';
+            }
         });
     </script>
-    
-    
 </body>
 
 </html>
