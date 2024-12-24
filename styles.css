@@ -474,7 +474,7 @@ a:hover {
 .promotion-section p {
     font-size: 1.1rem;
     line-height: 1.6;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
 }
 
 .join-button {
@@ -600,8 +600,6 @@ a:hover {
     width: auto;
     height: auto;
 }
-
-
 
 .form-container button {
     width: 100%;
