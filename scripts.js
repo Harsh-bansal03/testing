@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             await fetch(scriptURL, { method: 'POST', body: new FormData(form) });
             Swal.fire({
                 title: 'Submission Successful!',
-                text: 'Thank you for joining our community.(If you have not submitted you resume , kindly submit it.',
+                text: 'Thank you for joining our community.(If you have not submitted you resume , kindly submit it.)',
                 icon: 'success',
                 confirmButtonText: 'Okay',
             });
