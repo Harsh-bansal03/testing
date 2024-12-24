@@ -177,17 +177,17 @@
             e.preventDefault();
 
             // Validate Resume File Size
-            const resumeInput = document.getElementById('resume');
-            const resumeFile = resumeInput.files[0];
-            if (resumeFile.size > 2 * 1024 * 1024) { // 2 MB limit
-                Swal.fire({
-                    title: 'File too large!',
-                    text: 'Please upload a resume smaller than 2 MB.',
-                    icon: 'error',
-                    confirmButtonText: 'Okay',
-                });
-                return;
-            }
+            // const resumeInput = document.getElementById('resume');
+            // const resumeFile = resumeInput.files[0];
+            // if (resumeFile.size > 2 * 1024 * 1024) { // 2 MB limit
+            //     Swal.fire({
+            //         title: 'File too large!',
+            //         text: 'Please upload a resume smaller than 2 MB.',
+            //         icon: 'error',
+            //         confirmButtonText: 'Okay',
+            //     });
+            //     return;
+            // }
 
             submitBtn.disabled = true;
             submitBtn.textContent = 'Submitting...';
