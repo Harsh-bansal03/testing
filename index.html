@@ -1,29 +1,33 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>The Qubic India Academy</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" as="style">
-    </head>
-    
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Qubic India Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" as="style">
+</head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar scroll-animate fade-in" style="margin-top: 1%;">
         <!-- Logo Section -->
         <span class="logo">Qubic India Academy</span>
-    
+
         <!-- Hamburger Menu -->
         <div class="hamburger" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
         </div>
-    
+
         <!-- Navbar Links -->
         <div class="navbar-links">
             <a href="#home">Home</a>
@@ -31,14 +35,15 @@
             <a href="#contact">Contact Us</a>
         </div>
     </nav>
-    
-    
+
+
     <!-- Intro Section -->
     <section class="intro scroll-animate fade-in-up">
         <div class="intro-overlay" id="home">
             <h1 class="intro-title">The Qubic India Academy : <span>"Where Passion Meets Prosperity"</span></h1>
             <p class="intro-subtitle">www.theQubic India Academy.org</p>
-            <p class="intro-description">The Qubic India Academy offers a unique opportunity to cultivate and monetize your passion.</p>
+            <p class="intro-description">The Qubic India Academy offers a unique opportunity to cultivate and monetize
+                your passion.</p>
             <a href="#contact" class="intro-button">Contact Us</a>
         </div>
     </section>
@@ -54,73 +59,130 @@
         <img src="hero.jpeg" alt="Hero Image" class="hero-image scroll-animate zoom-in">
     </section>
 
-<!-- Combined Promotion Section -->
-<section class="promotion-section scroll-animate fade-in-up" id="promotion">
-    <div class="promotion-container">
-        <h2>Promote Your Passion with Us</h2>
-        <p>Join our platform to gain visibility, connect with students, and share your knowledge in our active WhatsApp community. Choose your role and start building your presence with us today.</p>
-        
-        <!-- Image Collage -->
-        <div class="product-container">
-            <div class="product-card">
-              <img src="collage1.jpeg" alt="Laptop Image">
-              <h3>School Qubic</h3>
-              <p>College Professor</p>
-              <p>Online</p>
-              <a href="https://chat.whatsapp.com/Lqp42fAuw1m9SaA9fBCMUI" class="button">Register</a>
+    <!-- Combined Promotion Section -->
+    <section class="promotion-section scroll-animate fade-in-up" id="promotion">
+        <div class="promotion-container">
+            <h2>Promote Your Passion with Us</h2>
+            <p>Join our platform to gain visibility, connect with students, and share your knowledge in our active
+                WhatsApp community. Choose your role and start building your presence with us today.</p>
+
+            <!-- Image Collage -->
+            <div class="product-container">
+                <div class="product-card">
+                    <img src="collage1.jpeg" alt="Laptop Image">
+                    <h3>School Qubic</h3>
+                    <p>College Professor</p>
+                    <p>Online</p>
+                    <a href="https://chat.whatsapp.com/Lqp42fAuw1m9SaA9fBCMUI" class="button">Register</a>
+                </div>
+                <div class="product-card">
+                    <img src="collage2.jpeg" alt="Laptop Image">
+                    <h3>University Qubic</h3>
+                    <p>School Tutors</p>
+                    <p>Online</p>
+                    <a href="https://chat.whatsapp.com/Dmw1UHShYeO2arxTDkaR04" class="button">Register</a>
+                </div>
+                <div class="product-card">
+                    <img src="collage3.jpeg" alt="Laptop Image">
+                    <h3>Students</h3>
+                    <p>School</p>
+                    <p>College</p>
+                    <a href="https://chat.whatsapp.com/CHOreCdn60x6KGXf3pSgVW" class="button">Register</a>
+                </div>
+                <div class="product-card">
+                    <img src="collage1.jpeg" alt="Laptop Image">
+                    <h3>Job Seekers</h3>
+                    <p>Teachers</p>
+                    <p>Lecturers</p>
+                    <a href="https://chat.whatsapp.com/BmWNM4pApH83PEam8hCL2c" class="button">Register</a>
+                </div>
             </div>
-            <div class="product-card">
-              <img src="collage2.jpeg" alt="Laptop Image">
-              <h3>University Qubic</h3>
-              <p>School Tutors</p>
-              <p>Online</p>
-              <a href="https://chat.whatsapp.com/Dmw1UHShYeO2arxTDkaR04" class="button">Register</a>
-            </div>
-            <div class="product-card">
-                <img src="collage3.jpeg" alt="Laptop Image">
-                <h3>Students</h3>
-                <p>School</p>
-                <p>College</p>
-                <a href="https://chat.whatsapp.com/CHOreCdn60x6KGXf3pSgVW" class="button">Register</a>
-            </div>
-            <div class="product-card">
-                <img src="collage1.jpeg" alt="Laptop Image">
-                <h3>Job Seekers</h3>
-                <p>Teachers</p>
-                <p>Lecturers</p>
-                <a href="https://chat.whatsapp.com/BmWNM4pApH83PEam8hCL2c" class="button">Register</a>
-            </div>
-          </div>
 
-        <!-- Join Button -->
-        <button class="join-button" onclick="redirectToForm()">Be a Part of Us</button>
-    </div>
-
-
-
-
-    <!-- Contact Form Section -->
-    <section class="contact scroll-animate fade-in-up" id="contact">
-        <h2>Let's Connect</h2>
-        <form action="https://formsubmit.co/academyqubic@gmail.com" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer scroll-animate fade-in">
-        <p>Contact us at: academyqubic@gmail.com | +91 8095178797 </p>
-        <div class="socials">
-            <a href="https://www.instagram.com/qubic.india/profilecard/?igsh=MXRkcHRwcWY1dXB5aw==">Instagram</a>
-            <a href="https://www.instagram.com/qubic.india/profilecard/?igsh=MXRkcHRwcWY1dXB5aw==">X</a>
-            <a href="https://www.instagram.com/qubic.india/profilecard/?igsh=MXRkcHRwcWY1dXB5aw==">Facebook</a>
+            <!-- Join Button -->
+            <!-- <button class="join-button" onclick="redirectToForm()">Be a Part of Us</button> -->
         </div>
-        <p>&copy; 2024 The Qubic India Academy</p>
-    </footer>
 
-    <script src="scripts.js"></script>
+        <section id="join-community">
+            <div class="form-container">
+              <h2>Join Our Community</h2>
+              <form method="post"
+                    action="https://script.google.com/macros/s/AKfycbyQMjeuiiGhgty8n9TeeMNt8dGwliA_OYd0fbQNbIDSAezZRz0p0lIBAYrI1qjE-kvL/exec"
+                    name="contact-form" enctype="multipart/form-data">
+                <label for="name">Your Name *</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+91" required>
+          
+                <label for="email">Your Email *</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          
+                <label for="profile">Select Your Profile *</label>
+                <select id="profile" name="profile" required>
+                  <option value="">Choose your profile</option>
+                  <option value="teacher">School Teacher</option>
+                  <option value="student">Student</option>
+                  <option value="admin">College Tutor</option>
+                  <option value="job_seeker">Job Seeker</option>
+                </select>
+          
+                <label for="Board">Board *</label>
+                <select id="Board" name="Board" required>
+                  <option value="">Select your Board</option>
+                  <option value="CBSE">CBSE</option>
+                  <option value="ICSE">ICSE</option>
+                  <option value="State Board">State Board</option>
+                </select>
+          
+                <label for="subject">Subject *</label>
+                <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+          
+                <label>Locality</label>
+                <div class="checkbox-group">
+                  <div><label><input type="checkbox" name="locality" value="cvraman"> CV Raman Nagar</label></div>
+                  <div><label><input type="checkbox" name="locality" value="kaggadaspura"> Kaggadaspura</label></div>
+                  <div><label><input type="checkbox" name="locality" value="gmpalya"> GM Palya</label></div>
+                  <div><label><input type="checkbox" name="locality" value="malleshpalya"> Malleshpalya</label></div>
+                  <div><label><input type="checkbox" name="locality" value="bnarayanpura"> B Narayanpura</label></div>
+                  <div><label><input type="checkbox" name="locality" value="krpuram"> KR Puram</label></div>
+                  <div><label><input type="checkbox" name="locality" value="pai"> Pai Layout</label></div>
+                  <div><label><input type="checkbox" name="locality" value="tin"> Tin Factory</label></div>
+                  <div><label><input type="checkbox" name="locality" value="other"> Other Locations Around</label></div>
+                </div>
+          
+          
+                <label for="resume">Send Resume:</label>
+                <p>Please send your resume to <a href="mailto:academyqubic@gmail.com">academyqubic@gmail.com</a>.</p>
+          
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          </section>
+
+
+        <!-- Contact Form Section -->
+        <section class="contact scroll-animate fade-in-up" id="contact">
+            <h2>Let's Connect</h2>
+            <form action="https://formsubmit.co/academyqubic@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer scroll-animate fade-in">
+            <p>Contact us at: academyqubic@gmail.com | +91 8095178797 </p>
+            <div class="socials">
+                <a href="https://www.instagram.com/qubic.india/profilecard/?igsh=MXRkcHRwcWY1dXB5aw==">Instagram</a>
+                <a href="https://www.instagram.com/qubic.india/profilecard/?igsh=MXRkcHRwcWY1dXB5aw==">X</a>
+                <a href="https://www.instagram.com/qubic.india/profilecard/?igsh=MXRkcHRwcWY1dXB5aw==">Facebook</a>
+            </div>
+            <p>&copy; 2024 The Qubic India Academy</p>
+        </footer>
+
+        <script src="scripts.js"></script>
 </body>
+
 </html>
